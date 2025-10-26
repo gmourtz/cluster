@@ -211,3 +211,61 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# ==============================================================================
+# Ansible-specific sensitive files
+# ==============================================================================
+
+# Local environment overrides with actual IPs, usernames, SSH keys
+.env.local
+.env.*.local
+
+# Local inventory/variable overrides (keep templated versions in git)
+inventories/**/*.local
+inventories/**/*.secrets
+host_vars/*.local
+host_vars/*.secrets
+group_vars/*.local
+group_vars/*.secrets
+
+# Ansible vault password files (never commit vault passwords)
+.vault_pass
+.vault_password
+vault_pass.txt
+vault_password.txt
+*vault*.key
+
+# Ansible retry files (contain hostnames from failed runs)
+*.retry
+
+# Ansible logs (may contain sensitive output)
+ansible.log
+*.ansible.log
+
+# ==============================================================================
+# SSH keys and credentials (NEVER commit these)
+# ==============================================================================
+*.pem
+id_rsa*
+id_ed25519*
+id_ecdsa*
+*.ppk
+
+# ==============================================================================
+# OS-specific files
+# ==============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+# ==============================================================================
+# Editor files
+# ==============================================================================
+*.swp
+*.swo
+.vscode/
+.idea/
