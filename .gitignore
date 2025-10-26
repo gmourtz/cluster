@@ -215,10 +215,6 @@ __marimo__/
 # Ansible-specific sensitive files
 # ==============================================================================
 
-# Local environment overrides with actual IPs, usernames, SSH keys
-.env.local
-.env.*.local
-
 # Local inventory/variable overrides (keep templated versions in git)
 inventories/**/*.local
 inventories/**/*.secrets
